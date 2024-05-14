@@ -1,0 +1,45 @@
+Problem statement
+You are having a character array (arr) containing ASCII characters. You are required to reverse the character array (arr) and return it as a string.
+
+You must do this by modifying the input array.
+
+Output the reverse of the input array.
+
+Example :
+S = “hello”
+
+Explanation : 
+
+The reverse of the input array is “olleh”.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= T <= 5
+1 <= S.length <= 10^5
+
+Time Limit : 1 sec
+Sample Input 1 :
+2
+ninja
+MoM
+Sample Output 1 :
+ajnin
+MoM
+Explanation Of Sample Input 1 :
+For test case 1 we have, 
+
+The reverse of “ninja” is “ajnin”.
+
+So, we output “ajnin” ( without quotes ).
+
+For test case 2 we have, 
+
+The reverse of “MoM” is “MoM” as it is a palindrome.
+
+So, we output “MoM”.
+Sample Input 2 :
+2
+ggUM
+Kzk
+Sample Output 2 :
+MUgg
+kzK
