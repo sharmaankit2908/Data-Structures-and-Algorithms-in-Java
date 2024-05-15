@@ -22,4 +22,23 @@ public class Solution {
         return false;
     }
 }
+
+//public class Solution {
+//     public static boolean isPalindrome(String str) {
+//         // Write your code here.
+//         int n=str.length();
+//         if (n==0 || n==1){
+//             return true;
+//         }
+//         int i=0;
+//         int j=n-1;
+//         // if (i==j){
+//         //     return true;
+//         // }
+    
+//         return ((str.charAt(i)==str.charAt(j)) && isPalindrome(str.substring(1,str.length()-1)));
+
+//     }
+// }
+
     
