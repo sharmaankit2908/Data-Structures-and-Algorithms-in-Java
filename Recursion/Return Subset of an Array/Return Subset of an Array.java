@@ -36,3 +36,36 @@ public class solution {
 		return final_ans;
 	}
 }
+
+//public class solution {
+// 	public static int[][] subsets_helper(int input[], int start_index) {
+// 		// Write your code here
+// 		if (start_index==input.length){
+// 			int ans[][]=new int[1][0];
+// 			return ans;
+// 		}
+// 		int smaller_output[][]=subsets_helper(input, start_index+1);
+// 		int ans[][]=new int[smaller_output.length*2][];
+// 		int k=0;
+// 		for (int i=0;i<smaller_output.length;i++){
+// 			ans[k++]=smaller_output[i];
+// 		}
+// 		for(int i=0;i<smaller_output.length;i++){
+// 			int l=smaller_output[i].length;
+// 			int dummy[]=new int[l+1];
+// 			dummy[0]=input[start_index];
+// 			for(int j=1;j<l+1;j++){
+// 				dummy[j]=smaller_output[i][j-1];
+// 			}
+// 			ans[k++]=dummy;
+// 		}
+// 		return ans;
+// 	}
+
+// 	// Return a 2D array that contains all the subsets
+// 	public static int[][] subsets(int input[]) {
+// 		// Write your code here
+// 		return subsets_helper(input,0);
+
+// 	}
+// }
