@@ -76,3 +76,55 @@ public class solution {
 		
 	}
 }
+// public class solution {
+// 	public static String get(int a){
+// 		String ans;
+// 		if (a==0 || a==1){
+// 			ans="";
+// 		}
+// 		else if (a==2){
+// 			ans="abc";
+// 		}
+// 		else if(a==3){
+// 			ans="def";
+// 		}
+// 		else if(a==4){
+// 			ans="ghi";
+// 		}
+// 		else if(a==5){
+// 			ans= "jkl";
+// 		}
+// 		else if(a==6){
+// 			ans="mno";
+// 		}
+// 		else if(a==7){
+// 			ans="pqrs";	
+// 		}
+// 		else if(a==8){
+// 			ans="tuv";
+// 		}
+// 		else {
+// 			ans="wxyz";
+// 		}
+// 		return ans;
+// 	}
+
+// 	public static void printKeypad_helper(int input,String s){
+// 		if (input==0){
+// 			System.out.println(s);
+// 			return;
+// 		}	
+// 		int n1=input/10;
+// 		int n2=input%10;
+// 		String s1=get(n2);
+// 		for (int i=0;i<s1.length();i++){
+// 			printKeypad_helper(n1,s1.charAt(i)+s);
+// 		}
+// 	}
+
+// 	public static void printKeypad(int input){
+// 		// Write your code here	
+// 		printKeypad_helper(input,"");		
+// 	}
+// }
+
