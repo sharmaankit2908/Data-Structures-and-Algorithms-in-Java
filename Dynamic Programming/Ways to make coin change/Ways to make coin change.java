@@ -1,41 +1,27 @@
 
 public class Solution {
-	static long dp[][];
-	public static long helper(int denominations[], int value, int index,int n){
-		if (dp[index][value] !=-1){
-			return dp[index][value];
-		}
-		if (value==0){
-			return 1;
-		}
-		if (index==n){
-			return 0;
-		}
-		long take=0;
-		if ((value-denominations[index]) >=0){
-			take=helper(denominations, value-denominations[index], index, n);
-		}
-		long not_take=helper(denominations, value, index+1, n);
-		long ans=take+not_take;
-		
-		dp[index][value]=ans;
-		return ans;
-
-	}
-
-        //write your code here	
 
 	public static long countWaysToMakeChange(int denominations[], int value){
-        //write your code here		
+        //write your code here	
 		int n=denominations.length;
-		dp=new long[n][value+1];
-		for (int i=0;i<n;i++){
-			for (int j=0;j<=value;j++){
-				dp[i][j]=-1;
+		long[][] dp=new long[n+1][value+1];
+		for(int i=0;i<=n;i++){
+			dp[i][0]=1;
+		}
+		for (int j=1;j<=value;j++){
+			dp[0][j]=0;
+		}
+		for (int i=1;i<=n;i++){
+			for(int j=1;j<=value;j++){
+				long take=0;
+				long not_take=dp[i-1][j];
+				if ((j-denominations[i-1])>=0){
+					take=dp[i][j-denominations[i-1]];
+				}
+				dp[i][j]=take+not_take;
 			}
 		}
-		return helper(denominations, value, 0,n);	
-
+		return dp[n][value];
 	}
 	
 }
